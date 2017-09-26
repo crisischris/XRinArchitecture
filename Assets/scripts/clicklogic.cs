@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class clicklogic : MonoBehaviour {
 
-    public GameObject playerLoc;
+    public GameObject Player;
+    public GameObject model;
 
     public GameObject panel1;
     public GameObject panel2;
@@ -25,6 +26,8 @@ public class clicklogic : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+        model.SetActive(false);
+        
         panel1.SetActive(true);
         panel2.SetActive(false);
         panel3.SetActive(false);
@@ -45,7 +48,12 @@ public class clicklogic : MonoBehaviour {
 	void Update () {
 
 
+        if (Player.transform.position.z == warp1.transform.position.z)
+        {
+            modelOn();
+        }
 
+        else modelOff();
     
 
         if(numCount == 1)
@@ -100,6 +108,18 @@ public class clicklogic : MonoBehaviour {
         print(numCount);
 
                 
+    }
+
+    public void modelOn()
+    {
+        model.SetActive(true);
+        
+    }
+
+    public void modelOff()
+    {
+        model.SetActive(false);
+
     }
 }
 
