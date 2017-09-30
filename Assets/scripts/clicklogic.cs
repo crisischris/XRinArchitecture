@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class clicklogic : MonoBehaviour {
 
+    public SceneChangerClick sceneChange;
+
     public GameObject Player;
     public GameObject model;
+    public GameObject TestMobileVR;
 
     public GameObject panel1;
     public GameObject panel2;
@@ -47,6 +50,11 @@ public class clicklogic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if(sceneChange.back == true)
+        {
+            Player.transform.position = new Vector3(warp2.transform.position.x, 2, warp2.transform.position.z);
+        }
+
 
         if (Player.transform.position.z == warp1.transform.position.z)
         {
@@ -54,9 +62,16 @@ public class clicklogic : MonoBehaviour {
         }
 
         else modelOff();
-    
 
-        if(numCount == 1)
+        if (Player.transform.position.z == warp2.transform.position.z)
+        {
+            TestMobileVROn();
+        }
+
+        else TestMobileVROff();
+
+
+        if (numCount == 1)
         {
             panel2.SetActive(true);
 
@@ -121,6 +136,25 @@ public class clicklogic : MonoBehaviour {
         model.SetActive(false);
 
     }
+
+
+
+          public void TestMobileVROn()
+    {
+        TestMobileVR.SetActive(true);
+
+    }
+
+    public void TestMobileVROff()
+    {
+        TestMobileVR.SetActive(false);
+
+    }
+
+
+
+
+
 }
 
 

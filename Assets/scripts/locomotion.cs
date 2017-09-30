@@ -31,4 +31,6 @@ public class locomotion : MonoBehaviour {
         Player.transform.position = new Vector3(posx, 2, posz);
         
     }
+
+  
 }
