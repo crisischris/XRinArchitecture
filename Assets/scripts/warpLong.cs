@@ -6,6 +6,7 @@ public class warpLong : MonoBehaviour {
 
     public GameObject Player;
     public GameObject warp;
+    public GameObject canvas;
 
     private float posx;
     private float posz;
@@ -15,6 +16,8 @@ public class warpLong : MonoBehaviour {
 
         posx = warp.transform.position.x;
         posz = warp.transform.position.z;
+        canvas.transform.position = new Vector3(.96f, 498, -15);
+
 
 
 	}
@@ -26,12 +29,14 @@ public class warpLong : MonoBehaviour {
 
     public void GoToExample()
     {
-        Player.transform.position = new Vector3(5, 2, 500);
+        Player.transform.position = new Vector3(1, 500, -12);
+        this.GetComponent<AudioSource>().Play();
 
     }
 
     public void returnToMain()
     {
         Player.transform.position = new Vector3(posx, 2, posz);
+        this.GetComponent<AudioSource>().Play();
     }
 }

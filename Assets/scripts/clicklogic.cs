@@ -23,11 +23,22 @@ public class clicklogic : MonoBehaviour {
     public GameObject warp5;
     public GameObject warp6;
 
+    public GameObject spotLight1;
+    public GameObject spotLight2;
+    public GameObject spotLight3;
+    public GameObject spotLight4;
+    public GameObject spotLight5;
+
+    public GameObject mainLight;
+
+
     private int numCount = 0;
 
 
     // Use this for initialization
     void Start () {
+
+       
 
         model.SetActive(false);
         
@@ -50,7 +61,9 @@ public class clicklogic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(sceneChange.back == true)
+        activateSpotlights();
+
+        if (sceneChange.back == true)
         {
             Player.transform.position = new Vector3(warp2.transform.position.x, 2, warp2.transform.position.z);
         }
@@ -113,6 +126,9 @@ public class clicklogic : MonoBehaviour {
         
 
 
+
+
+
     }
 
     public void numClicked()
@@ -150,6 +166,75 @@ public class clicklogic : MonoBehaviour {
         TestMobileVR.SetActive(false);
 
     }
+
+    public void activateSpotlight()
+    {
+        spotLight1.SetActive(true);
+        mainLight.SetActive(false);
+
+    }
+
+    public void activateSpotlights()
+    {
+     
+
+        if (Player.transform.position.z == warp1.transform.position.z)
+        {
+
+            spotLight1.SetActive(true);
+            spotLight2.SetActive(false);
+            mainLight.SetActive(false);
+            print("yay");
+
+        }
+
+        else if (Player.transform.position.z == warp2.transform.position.z)
+        {
+            spotLight2.SetActive(true);
+            spotLight1.SetActive(false);
+            mainLight.SetActive(false);
+        }
+
+        else if (Player.transform.position.z == warp3.transform.position.z)
+        {
+            spotLight3.SetActive(true);
+
+            spotLight2.SetActive(false);
+            spotLight1.SetActive(false);
+            mainLight.SetActive(false);
+        }
+
+        else if (Player.transform.position.z == warp4.transform.position.z)
+        {
+
+            spotLight4.SetActive(true);
+
+            spotLight3.SetActive(false);
+            spotLight2.SetActive(false);
+            spotLight1.SetActive(false);
+            mainLight.SetActive(false);
+        }
+
+        else if (Player.transform.position.z == warp5.transform.position.z)
+        {
+
+
+            spotLight5.SetActive(true);
+
+            spotLight4.SetActive(false);
+            spotLight3.SetActive(false);
+            spotLight2.SetActive(false);
+            spotLight1.SetActive(false);
+            mainLight.SetActive(false);
+        }
+
+
+
+
+
+    }
+
+
 
 
 
