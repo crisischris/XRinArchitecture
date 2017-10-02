@@ -24,6 +24,12 @@ public class uiLogic : MonoBehaviour {
         StartCoroutine(example());
     }
 
+    public void hover()
+
+    {
+        this.GetComponent<GvrAudioSource>().Play();
+    }
+
 
     IEnumerator example()
     {

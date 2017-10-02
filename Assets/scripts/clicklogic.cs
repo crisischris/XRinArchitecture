@@ -182,9 +182,13 @@ public class clicklogic : MonoBehaviour {
         {
 
             spotLight1.SetActive(true);
+
             spotLight2.SetActive(false);
+            spotLight3.SetActive(false);
+            spotLight4.SetActive(false);
+            spotLight5.SetActive(false);
             mainLight.SetActive(false);
-            print("yay");
+           
 
         }
 
@@ -192,6 +196,9 @@ public class clicklogic : MonoBehaviour {
         {
             spotLight2.SetActive(true);
             spotLight1.SetActive(false);
+            spotLight3.SetActive(false);
+            spotLight4.SetActive(false);
+            spotLight5.SetActive(false);
             mainLight.SetActive(false);
         }
 
@@ -201,6 +208,8 @@ public class clicklogic : MonoBehaviour {
 
             spotLight2.SetActive(false);
             spotLight1.SetActive(false);
+            spotLight4.SetActive(false);
+            spotLight5.SetActive(false);
             mainLight.SetActive(false);
         }
 
@@ -212,6 +221,7 @@ public class clicklogic : MonoBehaviour {
             spotLight3.SetActive(false);
             spotLight2.SetActive(false);
             spotLight1.SetActive(false);
+            spotLight5.SetActive(false);
             mainLight.SetActive(false);
         }
 

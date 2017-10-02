@@ -7,7 +7,7 @@ public class Float : MonoBehaviour
 
   
     public float Height;
-
+    public float distance;
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class Float : MonoBehaviour
         // occilate the Y position
       
 
-        transform.position = new Vector3(transform.position.x, (Height) + (Mathf.Sin(Time.time)/10), transform.position.z);
+        transform.position = new Vector3(transform.position.x, (Height) + (Mathf.Sin(Time.time)/distance), transform.position.z);
        
 
   

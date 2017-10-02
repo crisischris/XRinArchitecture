@@ -7,6 +7,7 @@ public class warpLong : MonoBehaviour {
     public GameObject Player;
     public GameObject warp;
     public GameObject canvas;
+    public GameObject sound;
 
     private float posx;
     private float posz;
@@ -17,9 +18,7 @@ public class warpLong : MonoBehaviour {
         posx = warp.transform.position.x;
         posz = warp.transform.position.z;
         canvas.transform.position = new Vector3(.96f, 498, -15);
-
-
-
+        sound.transform.position = new Vector3(-6, 501,-15);
 	}
 	
 	// Update is called once per frame
