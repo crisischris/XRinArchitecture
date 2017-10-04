@@ -23,6 +23,8 @@ public class clicklogic : MonoBehaviour {
     public GameObject warp5;
     public GameObject warp6;
 
+    public GameObject sound1;
+
     public GameObject spotLight1;
     public GameObject spotLight2;
     public GameObject spotLight3;
@@ -55,6 +57,7 @@ public class clicklogic : MonoBehaviour {
         warp4.SetActive(false);
         warp5.SetActive(false);
         warp6.SetActive(false);
+        sound1.SetActive(false);
                 
     }
 	
@@ -100,6 +103,8 @@ public class clicklogic : MonoBehaviour {
         {
             panel4.SetActive(true);
             warp6.SetActive(true);
+            sound1.SetActive(true);
+
 
         }
 
@@ -107,7 +112,7 @@ public class clicklogic : MonoBehaviour {
         {
             panel5.SetActive(true);
             warp6.SetActive(false);
-
+            sound1.SetActive(false);
 
         }             
 
@@ -120,7 +125,8 @@ public class clicklogic : MonoBehaviour {
             warp4.SetActive(true);
             warp5.SetActive(true);
             warp6.SetActive(false);
-            
+            sound1.SetActive(false);
+
         }
 
         
